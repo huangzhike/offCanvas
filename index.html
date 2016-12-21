@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/offcanvas.css">
+	<title>OffCanvas</title>
+</head>
+<body>
+
+	<div id="wraper" class="wraper">
+		<div class="header">
+			<span class="button"></span>
+		</div>
+		<div class="main">
+
+			<button id="panel-push">push</button>
+			<button id="panel-reveal">reveal</button>
+			<button id="panel-overlay">overlay</button>
+			<p>点击上面按钮打开或关闭</p>
+			<p>打开新侧边栏时请先关闭原先侧边栏，否则会同时存在多个侧边栏</p>
+			<p>呼出侧边栏后可对其操作</p>
+			<p></p>
+			<p></p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+			<p>A</p>
+
+		</div>
+		<div class="footer"></div>
+	</div>
+
+	<script src="js/OffCanvas.js"></script>
+
+	<script>
+		window.onload = function() {
+			var p = document.getElementById("panel-push");
+			var r = document.getElementById("panel-reveal");
+			var o = document.getElementById("panel-overlay");
+			var wraper = document.getElementById("wraper");
+
+			var a = new OffCanvas({
+				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+				type: "offcanvas-push",
+				wraper: wraper
+			});
+			p.addEventListener("click", a.handleEvent.bind(a));
+
+			var b = new OffCanvas({
+				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+				type: "offcanvas-reveal",
+				wraper: wraper
+			});
+			r.addEventListener("click", b.handleEvent.bind(b));
+
+			var c = new OffCanvas({
+				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+				type: "offcanvas-overlay",
+				wraper: wraper
+			});
+			o.addEventListener("click", c.handleEvent.bind(c));
+		}
+	</script>
+</body>
+
+</html>

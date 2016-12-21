@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 8px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, .1);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Microsoft Yahei";
+	font-size: 2.4rem;
+	line-height: 2;
+	text-align: center;
+}
+
+.header {
+	position: absolute;
+	height: 40px;
+	top: 0;
+	background-color: #03a9f4;
+	left: 0;
+	right: 0;
+}
+
+.main {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40px;
+	bottom: 50px;
+	overflow-y: auto;
+	background-color: #fff;
+	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	height: 50px;
+	bottom: 0;
+	background-color: #03a9f4;
+	left: 0;
+	right: 0;
+}
+
+.button {
+	width: 40px;
+	height: 40px;
+	float: left;
+	cursor: pointer;
+	text-align: center;
+}
+
+.button:after {
+	content: "";
+	margin-top: 20px;
+	width: 20px;
+	height: 2px;
+	background-color: #0385F4;
+	display: inline-block;
+	box-shadow: 0 7px 0 #0385F4, 0 -7px 0 #0385F4;
+}
+
+button {
+	margin: 1rem;
+	padding: .75em 1em;
+	border: 1px solid #0e90d2;
+	border-radius: 0;
+	background-color: #0e90d2;
+	color: #fff;
+	font-size: 1rem;
+	cursor: pointer
+}
+
+p {
+	padding: 40px;
+}

@@ -1,0 +1,60 @@
+
+body {
+	/*解决reveal无法操作*/
+	z-index: -1;
+	overflow-x: hidden;
+	position: relative;
+	transition: all .2s ease-out;
+	height: 100%;
+
+}
+
+body.OffC-active {
+	-webkit-transform: translate3d(200px, 0, 0);
+	transform: translate3d(200px, 0, 0);
+}
+
+.wraper {
+	position: relative;
+	transition: all .2s ease-out;
+	height: 100%;
+
+}
+
+.wraper.OffC-active {
+	-webkit-transform: translate3d(200px, 0, 0);
+	transform: translate3d(200px, 0, 0);
+}
+
+.offcanvas {
+	transition: all .2s ease-out;
+	z-index: -1;
+	overflow-x: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	background-color: #fff;
+	width: 200px;
+}
+
+.offcanvas-push {
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+
+.offcanvas-overlay {
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+
+.offcanvas-overlay.OffC-active {
+	z-index: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.offcanvas-reveal.OffC-active {
+	z-index: 1;
+}
