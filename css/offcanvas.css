@@ -18,7 +18,7 @@ body.OffC-active {
 	position: relative;
 	transition: all .2s ease-out;
 	height: 100%;
-
+    overflow-x: hidden;
 }
 
 .wraper.OffC-active {
