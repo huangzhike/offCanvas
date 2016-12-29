@@ -14,7 +14,7 @@
 
 	OffCanvas.prototype.create = function() {
 		if (this.open) return;
-		var OffC = document.createElement('div');
+		var OffC = document.createElement("div");
 		OffC.innerHTML = this.html;
 		OffC.className = "offcanvas " + this.type;
 		// remove时用
@@ -26,13 +26,13 @@
 		console.log("add");
 		// reflow触发动画
 		OffC.offsetWidth = OffC.offsetWidth;
-		this.act.classList.add('OffC-active');
+		this.act.classList.add("OffC-active");
 		this.open = true;
 	};
 
 	OffCanvas.prototype.close = function() {
 		if (!this.open) return;
-		this.act.classList.remove('OffC-active');
+		this.act.classList.remove("OffC-active");
 		var that = this;
 		// 移除
 		setTimeout(function() {
