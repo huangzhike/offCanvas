@@ -9,34 +9,34 @@
 			this.wraper = props.wraper;
 			this.open = false;
 			// 不同类型OffCanvas，插入的父节点
-			this.par = (this.type == "offcanvas-overlay" || this.type == "offcanvas-push") ? this.wraper : document.body;
+			this.appendedParent = (this.type == "offcanvas-overlay" || this.type == "offcanvas-push") ? this.wraper : document.body;
 		};
 
 	OffCanvas.prototype.create = function() {
 		if (this.open) return;
-		var OffC = document.createElement("div");
-		OffC.innerHTML = this.html;
-		OffC.className = "offcanvas " + this.type;
+		var panel = document.createElement("div");
+		panel.innerHTML = this.html;
+		panel.className = "offcanvas " + this.type;
 		// remove时用
-		this.OffC = OffC;
+		this.panel = panel;
 		// 添加或移除类的容器
-		this.act = this.type == "offcanvas-overlay" ? this.OffC : this.wraper;
+		this.act = this.type == "offcanvas-overlay" ? this.panel : this.wraper;
 		// 插入DOM
-		this.par.appendChild(OffC);
+		this.appendedParent.appendChild(panel);
 		console.log("add");
 		// reflow触发动画
-		OffC.offsetWidth = OffC.offsetWidth;
-		this.act.classList.add("OffC-active");
+		panel.offsetWidth = panel.offsetWidth;
+		this.act.classList.add("active");
 		this.open = true;
 	};
 
 	OffCanvas.prototype.close = function() {
 		if (!this.open) return;
-		this.act.classList.remove("OffC-active");
+		this.act.classList.remove("active");
 		var that = this;
 		// 移除
 		setTimeout(function() {
-			that.par.removeChild(that.OffC);
+			that.appendedParent.removeChild(that.panel);
 			console.log("remove");
 		}, 200);
 		this.open = false;

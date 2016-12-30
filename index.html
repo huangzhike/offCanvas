@@ -15,21 +15,15 @@
 		</div>
 		<div class="main">
 
-			<button id="panel-push">push</button>
-			<button id="panel-reveal">reveal</button>
-			<button id="panel-overlay">overlay</button>
+			<div><button id="panel-push">push</button></div>
+			<div><button id="panel-reveal">reveal</button></div>
+			<div><button id="panel-overlay">overlay</button></div>
+
 			<p>点击上面按钮打开或关闭</p>
 			<p>打开新侧边栏时请先关闭原先侧边栏，否则会同时存在多个侧边栏</p>
 			<p>呼出侧边栏后可对其操作</p>
 			<p></p>
 			<p></p>
-			<p>A</p>
-			<p>A</p>
-			<p>A</p>
-			<p>A</p>
-			<p>A</p>
-			<p>A</p>
-			<p>A</p>
 			<p>A</p>
 			<p>A</p>
 			<p>A</p>
@@ -46,33 +40,33 @@
 
 	<script>
 		window.onload = function() {
-			var p = document.getElementById("panel-push");
-			var r = document.getElementById("panel-reveal");
-			var o = document.getElementById("panel-overlay");
+			var push = document.getElementById("panel-push");
+			var reveal = document.getElementById("panel-reveal");
+			var overlay = document.getElementById("panel-overlay");
 			var wraper = document.getElementById("wraper");
 
-			var a = new OffCanvas({
-				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+			var pushPanel = new OffCanvas({
+				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
 				type: "offcanvas-push",
 				wraper: wraper
 			});
-			p.addEventListener("click", a.handleEvent.bind(a));
+			// addEventListener默认false
+			push.addEventListener("click", pushPanel.handleEvent.bind(pushPanel));
 
-			var b = new OffCanvas({
-				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+			var revealPanel = new OffCanvas({
+				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
 				type: "offcanvas-reveal",
 				wraper: wraper
 			});
-			r.addEventListener("click", b.handleEvent.bind(b));
+			reveal.addEventListener("click", revealPanel.handleEvent.bind(revealPanel));
 
-			var c = new OffCanvas({
-				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+			var overlayPanel = new OffCanvas({
+				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
 				type: "offcanvas-overlay",
 				wraper: wraper
 			});
-			o.addEventListener("click", c.handleEvent.bind(c));
+			overlay.addEventListener("click", overlayPanel.handleEvent.bind(overlayPanel));
 		}
 	</script>
 </body>
-
 </html>
