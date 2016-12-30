@@ -40,9 +40,7 @@
 
 	<script>
 		window.onload = function() {
-			var push = document.getElementById("panel-push");
-			var reveal = document.getElementById("panel-reveal");
-			var overlay = document.getElementById("panel-overlay");
+
 			var wraper = document.getElementById("wraper");
 
 			var pushPanel = new OffCanvas({
@@ -51,21 +49,21 @@
 				wraper: wraper
 			});
 			// addEventListener默认false
-			push.addEventListener("click", pushPanel.handleEvent.bind(pushPanel));
+			document.getElementById("panel-push").addEventListener("click", pushPanel.handleEvent.bind(pushPanel));
 
 			var revealPanel = new OffCanvas({
 				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
 				type: "offcanvas-reveal",
 				wraper: wraper
 			});
-			reveal.addEventListener("click", revealPanel.handleEvent.bind(revealPanel));
+			document.getElementById("panel-reveal").addEventListener("click", revealPanel.handleEvent.bind(revealPanel));
 
 			var overlayPanel = new OffCanvas({
 				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
 				type: "offcanvas-overlay",
 				wraper: wraper
 			});
-			overlay.addEventListener("click", overlayPanel.handleEvent.bind(overlayPanel));
+			document.getElementById("panel-overlay").addEventListener("click", overlayPanel.handleEvent.bind(overlayPanel));
 		}
 	</script>
 </body>
