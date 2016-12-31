@@ -1,6 +1,11 @@
 
 # offCanvas
 
+**移动端观看**
+
+<img width="200" height="200" src="img/code.png">
+
+
 * 类似原生应用的汉堡菜单，点击开关侧边栏菜单的组件，目前实现效果：
 	* push：点击按钮，侧边栏panel与主界面同时translate；
 		* 原理：侧边栏与主界面在同一容器中，可以是body或别的，侧边栏在视野外，激活时容器整体translate，露出侧边栏，同时`overflow-x: hidden`
@@ -26,5 +31,6 @@ var yourName = new OffCanvas({
 // 给DOMElement添加事件处理
 DOMElement.addEventListener("click", yourName.handleEvent.bind(yourName));
 ```
+* 这个写法有些麻烦，和之前的Modal有些不一样，不过懒得改了；
 * 请使用高级浏览器；
 * 别看js50行不到，踩了好多坑。。。
