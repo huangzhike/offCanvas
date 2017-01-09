@@ -5,8 +5,8 @@
 }
 
 ::-webkit-scrollbar {
-	width: 0.2rem;
-	height: 0.4rem;
+	width: 4px;
+	height: 8px;
 }
 
 ::-webkit-scrollbar,::-webkit-scrollbar-track {
@@ -24,7 +24,7 @@ body {
 
 .header {
 	top: 0;
-	height: 2rem;
+	height: 40px;
 	background-color: #03a9f4;
 }
 
@@ -35,8 +35,8 @@ body {
 }
 
 .main {
-	top: 2rem;
-	bottom: 2.5rem;
+	top: 40px;
+	bottom: 50px;
 	overflow-y: auto;
 	background-color: #fff;
 	text-align: center;
@@ -47,40 +47,40 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	height: 2.5rem;
+	height: 50px;
 	background-color: #03a9f4;
 }
 
 .button {
 	float: left;
-	width: 2rem;
-	height: 2rem;
+	width: 40px;
+	height: 40px;
 	cursor: pointer;
 }
 
 .button:after {
 	display: block;
-	margin-top: 1rem;
-	margin-left: 0.5rem;
-	width: 1rem;
-	height: 0.1rem;
+	margin-top: 20px;
+	margin-left: 10px;
+	width: 20px;
+	height: 2px;
 	background-color: #0385f4;
-	box-shadow: 0 0.35rem 0 #0385f4,0 -0.35rem 0 #0385f4;
+	box-shadow: 0 7px 0 #0385f4,0 -7px 0 #0385f4;
 	content: "";
 }
 
 button {
-	margin: 0.75rem;
-	padding: 0.75rem 1.5rem;
+	margin: 15px;
+	padding: 15px 30px;
 	width: 80%;
-	max-width: 15rem;
+	max-width: 300px;
 	border: 1px solid #0e90d2;
 	background-color: #0e90d2;
 	color: #fff;
-	font-size: 1.125rem;
+	font-size: 22.5px;
 	cursor: pointer;
 }
 
 p {
-	padding: 2rem;
+	padding: 40px;
 }
