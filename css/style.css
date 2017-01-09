@@ -1,42 +1,42 @@
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 8px;
-	background-color: transparent;
+	width: 0.2rem;
+	height: 0.4rem;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar,::-webkit-scrollbar-track {
 	background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: rgba(0, 0, 0, .1);
+	background-color: rgba(0,0,0,.1);
 }
 
 body {
-	font-family: "Microsoft Yahei";
 	text-align: center;
+	font-family: Microsoft Yahei;
 }
 
 .header {
-	position: absolute;
-	height: 40px;
 	top: 0;
+	height: 2rem;
 	background-color: #03a9f4;
-	left: 0;
+}
+
+.header,.main {
+	position: absolute;
 	right: 0;
+	left: 0;
 }
 
 .main {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 40px;
-	bottom: 50px;
+	top: 2rem;
+	bottom: 2.5rem;
 	overflow-y: auto;
 	background-color: #fff;
 	text-align: center;
@@ -44,43 +44,43 @@ body {
 
 .footer {
 	position: fixed;
-	height: 50px;
-	bottom: 0;
-	background-color: #03a9f4;
-	left: 0;
 	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 2.5rem;
+	background-color: #03a9f4;
 }
 
 .button {
-	width: 40px;
-	height: 40px;
 	float: left;
+	width: 2rem;
+	height: 2rem;
 	cursor: pointer;
 }
 
 .button:after {
-	content: "";
-	margin-top: 20px;
-	margin-left: 10px;
-	width: 20px;
-	height: 2px;
-	background-color: #0385F4;
 	display: block;
-	box-shadow: 0 7px 0 #0385F4, 0 -7px 0 #0385F4;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+	width: 1rem;
+	height: 0.1rem;
+	background-color: #0385f4;
+	box-shadow: 0 0.35rem 0 #0385f4,0 -0.35rem 0 #0385f4;
+	content: "";
 }
 
 button {
-	margin: 15px;
-	padding: 15px 30px;
+	margin: 0.75rem;
+	padding: 0.75rem 1.5rem;
 	width: 80%;
-	max-width: 300px;
+	max-width: 15rem;
 	border: 1px solid #0e90d2;
 	background-color: #0e90d2;
 	color: #fff;
-	font-size: 18px;
-	cursor: pointer
+	font-size: 1.125rem;
+	cursor: pointer;
 }
 
 p {
-	padding: 40px;
+	padding: 2rem;
 }
