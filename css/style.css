@@ -25,7 +25,7 @@ body {
 .header {
 	top: 0;
 	height: 40px;
-	background-color: #03a9f4;
+	background-color: #2b2d35;
 }
 
 .header,.main {
@@ -48,7 +48,7 @@ body {
 	bottom: 0;
 	left: 0;
 	height: 50px;
-	background-color: #03a9f4;
+	background-color: #2b2d35;
 }
 
 .button {
@@ -64,8 +64,8 @@ body {
 	margin-left: 10px;
 	width: 20px;
 	height: 2px;
-	background-color: #0385f4;
-	box-shadow: 0 7px 0 #0385f4,0 -7px 0 #0385f4;
+	background-color: #50535F;
+	box-shadow: 0 7px 0 #50535F,0 -7px 0 #50535F;
 	content: "";
 }
 
@@ -74,10 +74,10 @@ button {
 	padding: 15px 30px;
 	width: 80%;
 	max-width: 300px;
-	border: 1px solid #0e90d2;
-	background-color: #0e90d2;
+	border: none;
+	background-color: #2b2d35;
 	color: #fff;
-	font-size: 22.5px;
+	font-size: 22px;
 	cursor: pointer;
 }
 

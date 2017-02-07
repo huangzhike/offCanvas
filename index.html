@@ -24,7 +24,7 @@
 			<div>
 				<button id="panel-overlay" class="btn">overlay</button>
 			</div>
-			<p>点击上面按钮打开或关闭</p>
+			<p>点击上面按钮打开，其它位置关闭</p>
 			<p>打开新侧边栏时请先关闭原先侧边栏，否则会同时存在多个侧边栏</p>
 			<p>呼出侧边栏后可对其操作</p>
 			<p></p>
@@ -46,33 +46,34 @@
 		var wraper = document.getElementById("wraper");
 		var html = "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>";
 
-		// addEventListener默认false
-		document.getElementById("panel-push").addEventListener("click", function() {
-
-			new OffCanvas({
-				html: html,
-				type: "offcanvas-push",
-				wraper: wraper
-			});
+		var push = new OffCanvas({
+			html: html,
+			type: "offcanvas-push",
+			wraper: wraper
 		});
 
-		document.getElementById("panel-reveal").addEventListener("click", function() {
-			new OffCanvas({
-				html: html,
-				type: "offcanvas-reveal",
-				wraper: wraper
-			});
 
-
+		var reveal = new OffCanvas({
+			html: html,
+			type: "offcanvas-reveal",
+			wraper: wraper
 		});
 
-		document.getElementById("panel-overlay").addEventListener("click", function() {
-			new OffCanvas({
-				html: html,
-				type: "offcanvas-overlay",
-				wraper: wraper
-			});
+		var overlay = new OffCanvas({
+			html: html,
+			type: "offcanvas-overlay",
+			wraper: wraper
 		});
+
+		document.getElementById("panel-push").addEventListener("click",
+			push.create.bind(push)
+			// 否则this是btn
+			// addEventListener默认false
+		);
+
+		document.getElementById("panel-reveal").addEventListener("click", reveal.create.bind(reveal));
+
+		document.getElementById("panel-overlay").addEventListener("click", overlay.create.bind(overlay));
 
 	}
 	</script>
