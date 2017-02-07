@@ -44,12 +44,13 @@
 	window.onload = function() {
 
 		var wraper = document.getElementById("wraper");
+		var html = "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>";
 
 		// addEventListener默认false
 		document.getElementById("panel-push").addEventListener("click", function() {
 
 			new OffCanvas({
-				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+				html: html,
 				type: "offcanvas-push",
 				wraper: wraper
 			});
@@ -57,7 +58,7 @@
 
 		document.getElementById("panel-reveal").addEventListener("click", function() {
 			new OffCanvas({
-				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+				html: html,
 				type: "offcanvas-reveal",
 				wraper: wraper
 			});
@@ -67,12 +68,12 @@
 
 		document.getElementById("panel-overlay").addEventListener("click", function() {
 			new OffCanvas({
-				html: "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>",
+				html: html,
 				type: "offcanvas-overlay",
 				wraper: wraper
 			});
 		});
-		
+
 	}
 	</script>
 </body>
