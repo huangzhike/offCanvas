@@ -7,6 +7,7 @@
 		this.type = props.type;
 		// 父容器
 		this.wraper = props.wraper;
+		this.btn = props.btn;
 
 	};
 
@@ -25,7 +26,7 @@
 		this.appendedParent = this.type == "offcanvas-reveal" ? document.body : this.wraper;
 		// 插入DOM
 		this.appendedParent.appendChild(panel);
-		
+
 		// 添加或移除类的容器
 		this.active = this.type == "offcanvas-overlay" ? this.panel : this.wraper;
 		// overlay reflow
@@ -55,7 +56,7 @@
 
 		// 事件处理
 		var ele = e.target;
-		if (ele !== this.panel && e.target.className !== "btn") {
+		if (ele !== this.panel && e.target !== this.btn) {
 			this.close();
 		}
 

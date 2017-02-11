@@ -25,11 +25,12 @@ var yourName = new OffCanvas({
 		// 侧边栏类型，字符串
 		type: "offcanvas-push",
 		// DOM容器
-		wraper: wraper
+		wraper: yourWraper,
+		btn: yourBtn
 	});
 
 // 给DOMElement添加事件处理
-DOMElement.addEventListener("click", yourName.handleEvent.bind(yourName));
+DOMElement.addEventListener("click", yourName.create.bind(yourName));
 ```
 * 这个写法有些麻烦，和之前的Modal有些不一样，不过懒得改了；
 * 请使用高级浏览器；

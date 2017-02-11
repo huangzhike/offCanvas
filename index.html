@@ -46,34 +46,41 @@
 		var wraper = document.getElementById("wraper");
 		var html = "<p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p><p>A</p>";
 
+		var pushBtn = document.getElementById("panel-push");
+		var revealBtn = document.getElementById("panel-reveal");
+		var overlayBtn = document.getElementById("panel-overlay");
+
 		var push = new OffCanvas({
 			html: html,
 			type: "offcanvas-push",
-			wraper: wraper
+			wraper: wraper,
+			btn: pushBtn
 		});
 
 
 		var reveal = new OffCanvas({
 			html: html,
 			type: "offcanvas-reveal",
-			wraper: wraper
+			wraper: wraper,
+			btn: revealBtn
 		});
 
 		var overlay = new OffCanvas({
 			html: html,
 			type: "offcanvas-overlay",
-			wraper: wraper
+			wraper: wraper,
+			btn: overlayBtn
 		});
 
-		document.getElementById("panel-push").addEventListener("click",
+		pushBtn.addEventListener("click",
 			push.create.bind(push)
 			// 否则this是btn
 			// addEventListener默认false
 		);
 
-		document.getElementById("panel-reveal").addEventListener("click", reveal.create.bind(reveal));
+		revealBtn.addEventListener("click", reveal.create.bind(reveal));
 
-		document.getElementById("panel-overlay").addEventListener("click", overlay.create.bind(overlay));
+		overlayBtn.addEventListener("click", overlay.create.bind(overlay));
 
 	}
 	</script>
