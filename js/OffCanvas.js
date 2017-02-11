@@ -56,10 +56,20 @@
 
 		// 事件处理
 		var ele = e.target;
-		if (ele !== this.panel && e.target !== this.btn) {
-			this.close();
+		// 点击的是btn
+		if (ele == this.btn) {
+			return;
+		}
+		// 点击的是侧边栏
+		while (ele.parentNode) {
+			if (ele == this.panel) {
+				return;
+			}
+			ele = ele.parentNode;
 		}
 
+		this.close();
+		console.log(ele);
 	};
 
 	window.OffCanvas = OffCanvas;
